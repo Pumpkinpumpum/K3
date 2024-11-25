@@ -1,0 +1,147 @@
+/* Основные стили для body */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+/* Основной контент */
+main {
+    padding: 40px 20px;
+}
+
+/* Секция с изображениями */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Контейнер для изображения и подписи */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Размещение изображений и подписей по вертикали */
+    align-items: center;
+}
+
+.image {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+/* Подписи к изображениям */
+.image-caption {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #fff; /* Белый цвет подписи */
+}
+
+/* Форма */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+}
+
+form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Нижний колонтитул */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Адаптивность для маленьких экранов */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    section {
+        gap: 20px;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
